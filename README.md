@@ -72,9 +72,10 @@ Dieses Projekt ist eine Lernplattform, die es Benutzern ermöglicht, Kurse zu er
    - Öffne deinen Browser und gehe zu `http://localhost:5173`.
 
 4. **Über Komponente und ACD**:
+
  Meine Komponente ist der Kursplayer, der das Herzstück der Lernplattform darstellt. Er ermöglicht es Nutzern, Kurse zu durchsuchen, Videos abzuspielen, ihren Lernfortschritt zu verfolgen und Notizen zu speichern. Die Komponente ist als React-basierte Webanwendung implementiert und interagiert mit einem Node.js-Backend, um Kursdaten abzurufen und zu verwalten. Der Kursplayer ist für eine optimale Benutzererfahrung auf verschiedenen Geräten (Desktop, Tablet, Smartphone) entwickelt und bietet eine intuitive Benutzeroberfläche.
 
-- Hauptfunktionen:
+ Hauptfunktionen:
 Videoabspielung: Nutzer können Kursvideos über den integrierten Videoplayer abspielen.
 
 Fortschrittsverfolgung: Der Fortschritt wird basierend auf den abgeschlossenen Videos berechnet und in einer Fortschrittsleiste angezeigt.
@@ -83,16 +84,16 @@ Notizen:Nutzer können Notizen zu jedem Video speichern, die lokal oder im Backe
 
 Responsive Design: Die Benutzeroberfläche ist für verschiedene Bildschirmgrößen optimiert.
 
-- Abweichungen vom Architecture Concept Document (ACD)
+Abweichungen vom Architecture Concept Document (ACD)
 
-- Backend-Technologie: Node.js statt Spring Boot (Java)
+ Backend-Technologie: Node.js statt Spring Boot (Java)
 Im ACD wurde Spring Boot (Java) als Backend-Technologie empfohlen. Ich habe mich jedoch für Node.js mit Express.js entschieden, und zwar aus folgenden Gründen:
 
 Entwicklungsgeschwindigkeit: Node.js ermöglicht eine schnellere Entwicklung, da es asynchron und nicht-blockierend arbeitet. Das ist besonders wichtig für eine Plattform, die viele gleichzeitige Nutzer bedienen muss.
 
 Einheitliche Sprache: Da das Frontend mit React (JavaScript) entwickelt wurde, bietet Node.js die Möglichkeit, eine einheitliche Sprache (JavaScript) im gesamten Stack zu verwenden. Das vereinfacht die Wartung und reduziert den Kontextwechsel für Entwickler.
 
-- Keine Speicherung von Nutzerdaten
+ Keine Speicherung von Nutzerdaten
 Im ACD wurde die Speicherung von Nutzerdaten in einer Datenbank (z. B. PostgreSQL oder MongoDB) vorgesehen. In meiner Implementierung werden jedoch keine Nutzerdaten gespeichert. Hier sind die Gründe:
 
 Einfachheit: Da die Plattform derzeit keine Benutzerkonten oder Authentifizierung erfordert, wurde auf die Speicherung von Nutzerdaten verzichtet, um die Komplexität zu reduzieren.
@@ -101,7 +102,7 @@ Datenschutz: Durch den Verzicht auf die Speicherung von Nutzerdaten wird das Ris
 
 Fokus auf Kernfunktionen: Die Plattform konzentriert sich zunächst auf die Bereitstellung von Kursinhalten und die Verfolgung des Lernfortschritts, ohne die Notwendigkeit einer Benutzerverwaltung.
 
-- Keine Implementierung von Stripe oder PayPal
+ Keine Implementierung von Stripe oder PayPal
 Im ACD wurde die Integration eines Zahlungsdienstleisters wie Stripe oder PayPal empfohlen. In meiner Implementierung wurde jedoch keine Zahlungsabwicklung integriert. Hier sind die Gründe:
 
 Fokus auf kostenlose Kurse: Die Plattform konzentriert sich derzeit auf die Bereitstellung von kostenlosen Kursen, sodass keine Zahlungsabwicklung erforderlich ist.
@@ -115,7 +116,7 @@ Konsequenz: Die Plattform ist einfacher zu entwickeln und zu warten, bietet jedo
 Interaktion mit anderen Komponenten
 Meine Komponente (Kursplayer) interagiert mit mehreren anderen Teilen des Systems. Hier ist eine Übersicht:
 
-- 1. Kursdaten in MongoDB
+1. Kursdaten in MongoDB
 Interaktion: Die Kursinhalte (z. B. Videos, Texte, Aufgaben) werden in MongoDB gespeichert und über das Backend abgerufen.
 
 Gründe: MongoDB bietet eine flexible Schema-Definition, die es ermöglicht, verschiedene Arten von Kursinhalten effizient zu speichern.
