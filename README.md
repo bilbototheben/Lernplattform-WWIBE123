@@ -6,48 +6,52 @@
 
 ## Installation
 
-1. **Klonen des Repositories**:
+1. **Backend einrichten**:
 
-   ```bash
-   git clone https://github.com/DEIN-BENUTZERNAME/DEIN-REPOSITORY-NAME.git
-   cd DEIN-REPOSITORY-NAME
-Backend einrichten:
+   - Navigiere in das `backend`-Verzeichnis:
 
-Navigiere in das backend-Verzeichnis:
+     ```bash
+     cd backend
+     ```
 
-cd backend
-Installiere die Abhängigkeiten:
+   - Installiere die Abhängigkeiten:
 
-npm install
-Erstelle eine .env-Datei im backend-Verzeichnis und füge deine MongoDB-Verbindungs-URI hinzu:
+     ```bash
+     npm install
+     ```
 
-env
-Copy
-MONGO_URI=mongodb+srv://<BENUTZERNAME>:<PASSWORT>@cluster0.a5baq.mongodb.net/?retryWrites=true&w=majority
-Starte das Backend:
+   - Erstelle eine `.env`-Datei im `backend`-Verzeichnis und füge deine MongoDB-Verbindungs-URI hinzu:
 
-bash
-Copy
-npm start
-Frontend einrichten:
+     ```env
+     MONGO_URI=mongodb+srv://<BENUTZERNAME>:<PASSWORT>@cluster0.a5baq.mongodb.net/?retryWrites=true&w=majority
+     ```
 
-Navigiere in das frontend-Verzeichnis:
+   - Starte das Backend:
 
-bash
-Copy
-cd ../frontend
-Installiere die Abhängigkeiten:
+     ```bash
+     npm start
+     ```
 
-npm install
-Starte das Frontend:
+2. **Frontend einrichten**:
 
-npm run dev
-Anwendung öffnen:
+   - Navigiere in das `frontend`-Verzeichnis:
 
-Öffne deinen Browser und gehe zu http://localhost:5173.
+     ```bash
+     cd ../frontend
+     ```
 
-Projektstruktur
-backend/: Enthält den Express-Server und die MongoDB-Verbindung.
+   - Installiere die Abhängigkeiten:
 
-frontend/: Enthält die React-Anwendung.
+     ```bash
+     npm install
+     ```
 
+   - Starte das Frontend:
+
+     ```bash
+     npm run dev
+     ```
+
+3. **Anwendung öffnen**:
+
+   - Öffne deinen Browser und gehe zu `http://localhost:5173`.
