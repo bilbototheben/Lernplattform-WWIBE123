@@ -49,11 +49,8 @@ Dieses Projekt ist eine Lernplattform, die es Benutzern ermöglicht, Kurse zu er
 
 2. **Frontend einrichten**:
 
-   - Navigiere in das `frontend`-Verzeichnis:
+   - Navigiere wieder in das frontend:
 
-     ```bash
-     cd ../frontend
-     ```
 
    - Installiere die Abhängigkeiten:
 
@@ -73,14 +70,14 @@ Dieses Projekt ist eine Lernplattform, die es Benutzern ermöglicht, Kurse zu er
 
 4. **Über Komponente und ACD**:
 
- Meine Komponente ist der Kursplayer, der das Herzstück der Lernplattform darstellt. Er ermöglicht es Nutzern, Kurse zu durchsuchen, Videos abzuspielen, ihren Lernfortschritt zu verfolgen und Notizen zu speichern. Die Komponente ist als React-basierte Webanwendung implementiert und interagiert mit einem Node.js-Backend, um Kursdaten abzurufen und zu verwalten. Der Kursplayer ist für eine optimale Benutzererfahrung auf verschiedenen Geräten (Desktop, Tablet, Smartphone) entwickelt und bietet eine intuitive Benutzeroberfläche.
+ Meine Komponente ist der Kursplayer, der das Herzstück der Lernplattform darstellt. Er ermöglicht es Nutzern, Kurse zu durchsuchen, Videos abzuspielen, ihren Lernfortschritt zu verfolgen und Notizen zu speichern. Die Komponente ist als React-basierte Webanwendung implementiert und interagiert mit einem Node.js-Backend, um Kursdaten abzurufen und zu verwalten. Der Kursplayer ist für eine optimale Benutzererfahrung auf verschiedenen Geräten (Desktop, Tablet, Smartphone) entwickelt.
 
  Hauptfunktionen:
 Videoabspielung: Nutzer können Kursvideos über den integrierten Videoplayer abspielen.
 
 Fortschrittsverfolgung: Der Fortschritt wird basierend auf den abgeschlossenen Videos berechnet und in einer Fortschrittsleiste angezeigt.
 
-Notizen:Nutzer können Notizen zu jedem Video speichern, die lokal oder im Backend gespeichert werden.
+Notizen:Nutzer können Notizen zu jedem Video speichern, die im Backend gespeichert werden.
 
 Responsive Design: Die Benutzeroberfläche ist für verschiedene Bildschirmgrößen optimiert.
 
@@ -89,14 +86,14 @@ Abweichungen vom Architecture Concept Document (ACD)
  Backend-Technologie: Node.js statt Spring Boot (Java)
 Im ACD wurde Spring Boot (Java) als Backend-Technologie empfohlen. Ich habe mich jedoch für Node.js mit Express.js entschieden, und zwar aus folgenden Gründen:
 
-Entwicklungsgeschwindigkeit: Node.js ermöglicht eine schnellere Entwicklung, da es asynchron und nicht-blockierend arbeitet. Das ist besonders wichtig für eine Plattform, die viele gleichzeitige Nutzer bedienen muss.
+Community und Ökosystem: Node.js hat eine große und aktive Community sowie ein umfangreiches Ökosystem von Bibliotheken und Tools (z. B. Express.js, Mongoose), die die Entwicklung beschleunigen.
 
 Einheitliche Sprache: Da das Frontend mit React (JavaScript) entwickelt wurde, bietet Node.js die Möglichkeit, eine einheitliche Sprache (JavaScript) im gesamten Stack zu verwenden. Das vereinfacht die Wartung und reduziert den Kontextwechsel für Entwickler.
 
  Keine Speicherung von Nutzerdaten
 Im ACD wurde die Speicherung von Nutzerdaten in einer Datenbank (z. B. PostgreSQL oder MongoDB) vorgesehen. In meiner Implementierung werden jedoch keine Nutzerdaten gespeichert. Hier sind die Gründe:
 
-Einfachheit: Da die Plattform derzeit keine Benutzerkonten oder Authentifizierung erfordert, wurde auf die Speicherung von Nutzerdaten verzichtet, um die Komplexität zu reduzieren.
+Einfachheit: Da die Plattform derzeit keine Benutzerkonten oder Authentifizierung erfordert, wurde auf die Speicherung von Nutzerdaten verzichtet, um die Komplexität zu reduzieren.Außerdem sollte eine frühere Komponente den Prozess der Authentifizerung übernehmen.
 
 Datenschutz: Durch den Verzicht auf die Speicherung von Nutzerdaten wird das Risiko von Datenschutzverletzungen minimiert, was besonders in der Anfangsphase der Plattform wichtig ist.
 
@@ -110,8 +107,6 @@ Fokus auf kostenlose Kurse: Die Plattform konzentriert sich derzeit auf die Bere
 Reduzierte Komplexität: Durch den Verzicht auf die Integration eines Zahlungsdienstleisters wird die Komplexität der Plattform reduziert, was die Entwicklung und Wartung vereinfacht.
 
 Zukünftige Erweiterung: Die Integration eines Zahlungsdienstleisters kann zu einem späteren Zeitpunkt erfolgen, wenn die Plattform um kostenpflichtige Kurse erweitert wird.
-
-Konsequenz: Die Plattform ist einfacher zu entwickeln und zu warten, bietet jedoch derzeit keine Monetarisierungsmöglichkeiten.
 
 Interaktion mit anderen Komponenten
 Meine Komponente (Kursplayer) interagiert mit mehreren anderen Teilen des Systems. Hier ist eine Übersicht:
