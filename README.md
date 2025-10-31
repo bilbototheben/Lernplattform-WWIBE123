@@ -24,7 +24,8 @@ Dieses Projekt ist eine Lernplattform, die es Benutzern ermöglicht, Kurse zu er
    Klone das Repository auf deinen lokalen Rechner:
 
    ```bash
-   git clone https://github.com/WWIBE23/portfolio-wwibe123-lernplattform.git
+   git clone https://github.com/bilbototheben/Lernplattform-WWIBE123.git
+
    cd portfolio-wwibe123-lernplattform
 
 1. **Backend einrichten**:
